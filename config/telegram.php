@@ -40,6 +40,7 @@ return [
             'commands'            => [
                 //Acme\Project\Commands\MyTelegramBot\BotCommand::class
                 App\Telegram\Commands\HelpCommand::class,
+            
 
             ],
         ],
@@ -118,7 +119,7 @@ return [
     |
     */
     'commands'                     => [
-        Telegram\Bot\Commands\HelpCommand::class,
+        // Telegram\Bot\Commands\HelpCommand::class,
     ],
 
     /*

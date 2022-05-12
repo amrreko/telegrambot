@@ -13,10 +13,11 @@ use Telegram\Bot\Laravel\Facades\Telegram;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-Route::get('/',[App\Http\Controllers\TelegramController::class,'sendMessage']);
+Route::get('/', function () {
+    return 'Hi Moro';
+});
+
+Route::get('/send-message',[App\Http\Controllers\TelegramController::class,'sendMessage']);
 Route::get('/updated-activity',[App\Http\Controllers\TelegramController::class,'updateActivity']);
 Route::post('/send-message',[App\Http\Controllers\TelegramController::class,'storeMessage']);
 Route::post('/store-photo',[App\Http\Controllers\TelegramController::class,'storePhoto']);
@@ -24,5 +25,10 @@ Route::post('/42yUojv1YQPOssPEpn5i3q6vjdhh7hl7djVWDIAVhFDRMAwZ1tj0Og2v4PWyj4PZ/w
     $update = Telegram::commandsHandler(true);
 });
 
+Route::get('/setwebhook', function () {
+	$response = Telegram::setWebhook(['url' => config('app.url').'/42yUojv1YQPOssPEpn5i3q6vjdhh7hl7djVWDIAVhFDRMAwZ1tj0Og2v4PWyj4PZ/webhook']);
+	dd($response);
+});
 
 Route::get('/prayer-time',[App\Http\Controllers\PrayerTimeController::class,'getPrayerTime']);
+Route::get('/test',[App\Http\Controllers\PrayerTimeController::class,'test']);
