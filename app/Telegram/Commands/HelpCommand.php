@@ -50,9 +50,9 @@ class HelpCommand extends Command
         $prayTime->setCalcMethod($prayTime->Egypt);
         $times = $prayTime->getPrayerTimes(Carbon::today('Africa/Cairo')->getTimestamp(), 30.033333,    31.233334, +2);
       
-        for($i=0;$i<=5;$i++){
+        for($i=0;$i<=6;$i++){
             // $text .= $this->getPrayerName($i) .' توقيت '.  $times[$i].chr(10);
-            if(!in_array($i,[1,4])){
+            if(!in_array($i,[1,5])){
             $azan = str_replace(['PM','AM'],['مساءً','صباحًا'],Carbon::parse($times[$i])->locale('ar')->format('g:i A'));
             $text .= $this->getPrayerName($i) .' توقيت '. $azan.chr(10);
             }
