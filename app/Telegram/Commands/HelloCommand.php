@@ -31,7 +31,7 @@ class HelloCommand extends Command
     {
         $response = $this->getUpdate();
         
-        $text = 'أهلا بيك'.chr(10).chr(10);
+        $text = 'أهلا بيك مرحبًا'.chr(10).chr(10);
        
     
         $this->replyWithMessage(compact('text'));
