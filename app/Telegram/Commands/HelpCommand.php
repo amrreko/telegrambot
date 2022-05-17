@@ -38,7 +38,7 @@ class HelpCommand extends Command
         $text = 'أهلا بيك'.chr(10).chr(10);
         $text .= 'ربنا يحفظ عمرو ادعى لى. محتاج حاجة ممكن تدخل على الموقع التالي'.chr(10);
         $text .= env('APP_URL').chr(10).chr(10);
-        $text .= 'اضغط  /1  للتحديث'.chr(10);
+        $text .= 'اضغط  /update  للتحديث'.chr(10);
         $text .= '-------'.chr(10);
         $date =  Carbon::now('Africa/Cairo')->locale('ar');
         $day = $date->isoFormat('LLL');
