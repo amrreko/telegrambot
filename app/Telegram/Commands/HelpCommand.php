@@ -37,7 +37,7 @@ class HelpCommand extends Command
         
         $text = 'أهلا بيك'.chr(10).chr(10);
         $text .= 'ربنا يحفظ عمرو ادعى لي'.chr(10);
-        $text .= env('APP_URL').chr(10).chr(10);
+        // $text .= env('APP_URL').chr(10).chr(10);
         $text .= 'اضغط  /update  للتحديث'.chr(10);
         $text .= '-------'.chr(10);
         $date =  Carbon::now('Africa/Cairo')->locale('ar');
@@ -52,7 +52,7 @@ class HelpCommand extends Command
       
         for($i=0;$i<=6;$i++){
             // $text .= $this->getPrayerName($i) .' توقيت '.  $times[$i].chr(10);
-            if(!in_array($i,[1,5])){
+            if(!in_array($i,[1,4])){
             $azan = str_replace(['PM','AM'],['مساءً','صباحًا'],Carbon::parse($times[$i])->locale('ar')->format('g:i A'));
             $text .= $this->getPrayerName($i) .' توقيت '. $azan.chr(10);
             }
@@ -77,9 +77,12 @@ class HelpCommand extends Command
                 return 'آذان العصر';
                 break;
             case '4':
-                return 'آذان المغرب';
+                return 'توقيت الغروب';
                 break;
             case '5':
+                    return 'آذان المغرب';
+                    break;
+            case '6':
                 return 'آذان العشاء';
                 break;
             default:
