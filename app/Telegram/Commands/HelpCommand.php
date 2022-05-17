@@ -52,8 +52,10 @@ class HelpCommand extends Command
       
         for($i=0;$i<=5;$i++){
             // $text .= $this->getPrayerName($i) .' توقيت '.  $times[$i].chr(10);
+            if(!in_array($i,[1,5])){
             $azan = str_replace(['PM','AM'],['مساءً','صباحًا'],Carbon::parse($times[$i])->locale('ar')->format('g:i A'));
             $text .= $this->getPrayerName($i) .' توقيت '. $azan.chr(10);
+            }
         }
     
         $this->replyWithMessage(compact('text'));
