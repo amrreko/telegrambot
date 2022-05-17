@@ -16,12 +16,12 @@ class HelloCommand extends Command
     /**
      * @var array Command Aliases
      */
-    protected $aliases = ['listcommands'];
+    protected $aliases = ['hellocommands'];
 
     /**
      * @var string Command Description
      */
-    protected $description = 'Hello command, Get a list of all commands';
+    protected $description = 'Hello command, Get a message of hello commands';
 
     /**
      * {@inheritdoc}
