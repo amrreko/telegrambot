@@ -1,11 +1,10 @@
 <?php
-
 namespace App\Telegram\Commands;
 use Telegram\Bot\Commands\Command;
 use Telegram;
 
 /**
- * Class HelpCommand.
+ * Class HelloCommand.
  */
 class HelloCommand extends Command
 {
