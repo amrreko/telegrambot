@@ -41,6 +41,7 @@ return [
                 //Acme\Project\Commands\MyTelegramBot\BotCommand::class
                 App\Telegram\Commands\HelpCommand::class,
                 App\Telegram\Commands\HelloCommand::class,
+                App\Telegram\Commands\ResultCommand::class,
 
 
             ],
