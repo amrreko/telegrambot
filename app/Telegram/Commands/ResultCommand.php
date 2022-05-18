@@ -38,12 +38,12 @@ class ResultCommand extends Command
         {
             $args = $this->getArguments();
          
-            Log::debug($args);
+            // Log::debug($args);
             if(isset($args) && is_array($args) ){
                
                 if(isset($args['result'])){
-                    $text .= $args['result'].chr(10).chr(10);
-                    Log::debug($args['result']);
+                    $text .= implode('',$args).chr(10).chr(10);
+                    // Log::debug($args['result']);
                 }
                 
              } 
