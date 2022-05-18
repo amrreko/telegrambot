@@ -37,7 +37,7 @@ class HelloCommand extends Command
         if($this->getArguments())
         {
             $args = $this->getArguments();
-            $text .= $args;
+            // $text .= $args;
             Log::debug($args);
             // if($args['result']){
             //     Log::debug($args['result']);
