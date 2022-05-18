@@ -24,7 +24,7 @@ class ResultCommand extends Command
      * @var string Command Description
      */
     protected $description = 'Result command, Get a result';
-    // protected $pattern = '{result}';
+    protected $pattern = '{result} {num}';
 
     /**
      * {@inheritdoc}
