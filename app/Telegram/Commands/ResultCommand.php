@@ -42,7 +42,7 @@ class ResultCommand extends Command
             if(isset($args) && is_array($args) ){
                 // $text .= implode(' ',$args).chr(10).chr(10);
                 if(isset($args['result'])){
-                     $text .= 'two words:'. $args['result'].chr(10).chr(10);
+                     $text .=  $args['result'];
                     // Log::debug($args['result']);
                 }
                 if(isset($args['num'])){
