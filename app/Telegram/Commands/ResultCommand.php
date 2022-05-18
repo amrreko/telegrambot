@@ -6,7 +6,7 @@ use Telegram\Bot\Commands\Command;
 use Telegram;
 
 /**
- * Class HelloCommand.
+ * Class ResultCommand.
  */
 class ResultCommand extends Command
 {
