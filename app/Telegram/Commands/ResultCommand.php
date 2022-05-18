@@ -40,9 +40,9 @@ class ResultCommand extends Command
          
             // Log::debug($args);
             if(isset($args) && is_array($args) ){
-               
+                $text .= implode('',$args).chr(10).chr(10);
                 if(isset($args['result'])){
-                    $text .= implode('',$args).chr(10).chr(10);
+                    // $text .= implode('',$args).chr(10).chr(10);
                     // Log::debug($args['result']);
                 }
                 
