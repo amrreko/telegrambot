@@ -1,3 +1,5 @@
+/.well-known
+/cgi-bin
 /node_modules
 /public/hot
 /public/storage
